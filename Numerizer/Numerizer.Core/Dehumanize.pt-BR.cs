@@ -4,32 +4,34 @@ using Numerizer.Core.Contracts;
 
 namespace Numerizer.Core
 {
-    public class PTBRDehumanizer : IDehumanizer
+    public sealed class PTBRDehumanizer : IDehumanizer
     {
-        private Dictionary<string, long> lookup;
+        private Dictionary<string, long> cardinalLookup;
+
+        private string[] cardinalPartsDelimiters;
 
         public PTBRDehumanizer()
         {
-            InitializeDictionaries();
+            InitializeConstants();
         }
 
         public long DehumanizeCardinal(string source)
         {
             long output = 0;
 
-            var parts = source.Split(new[] { " e " }, StringSplitOptions.RemoveEmptyEntries);
+            var parts = source.SplitAndKeep(cardinalPartsDelimiters);
 
             foreach (var part in parts)
             {
                 long partValue = 1;
 
-                var elements = part.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var elements = part.Split(new[] { " ", " e " }, StringSplitOptions.RemoveEmptyEntries);
 
                 foreach (var element in elements)
                 {
-                    if (lookup.ContainsKey(element))
+                    if (cardinalLookup.ContainsKey(element))
                     {
-                        partValue *= lookup[element];
+                        partValue *= cardinalLookup[element];
                     }
                     else
                     {
@@ -48,9 +50,12 @@ namespace Numerizer.Core
             throw new NotImplementedException();
         }
 
-        private void InitializeDictionaries()
+        private void InitializeConstants()
         {
-            lookup = new Dictionary<string, long>()
+            cardinalPartsDelimiters = new string[] { "sextilhoes", "sextilhao", "quintilhoes", "quintilhao", "quadrilhoes", "quadrilhao",
+                "trilhoes", "trilhao", "bilhoes", "bilhao", "milhoes", "milhao", "mil "};
+
+            cardinalLookup = new Dictionary<string, long>()
             {
                 { "zero", 0},
                 { "um", 1 },
