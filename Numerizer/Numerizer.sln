@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numerizer.Core", "Numerizer.Core\Numerizer.Core.csproj", "{67046CA3-AA21-4D28-8AC4-044B952B8AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numerizer.Core.Test", "Numerizer.Core.Test\Numerizer.Core.Test.csproj", "{7E2CD6FD-F289-4318-977A-48CF96505CFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numerizer.Core.Console", "Numerizer.Core.Console\Numerizer.Core.Console.csproj", "{3083A19A-6A58-4481-81AA-708E3F0A9012}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67046CA3-AA21-4D28-8AC4-044B952B8AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67046CA3-AA21-4D28-8AC4-044B952B8AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67046CA3-AA21-4D28-8AC4-044B952B8AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67046CA3-AA21-4D28-8AC4-044B952B8AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E2CD6FD-F289-4318-977A-48CF96505CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2CD6FD-F289-4318-977A-48CF96505CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2CD6FD-F289-4318-977A-48CF96505CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2CD6FD-F289-4318-977A-48CF96505CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3083A19A-6A58-4481-81AA-708E3F0A9012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3083A19A-6A58-4481-81AA-708E3F0A9012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3083A19A-6A58-4481-81AA-708E3F0A9012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3083A19A-6A58-4481-81AA-708E3F0A9012}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
