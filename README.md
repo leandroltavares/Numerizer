@@ -3,6 +3,8 @@ Extension for parsing numerals from human-readable strings to numerical values i
 
 Inspired by the amazing Humanizr (https://github.com/Humanizr/Humanizer), this library aims to parse human-readable strings into numeric values.
 
+DISCLAIMER: This library is currently under construction and so full of bugs. 
+
 ### Table of contents
  - [Install](#install)
    [Features](#features)
